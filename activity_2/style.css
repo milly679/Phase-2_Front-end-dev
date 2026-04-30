@@ -1,152 +1,4 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body 
-{
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
-  line-height: 1.6;
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
-  line-height: 1.6;
-}
-
-.navbar {
-  background-color: #1520b0;
-  padding: 15px 30px;
-}
-
-.navbar ul {
-  display: flex;
-  list-style: none;
-  gap: 30px;
-  margin: 0;
-  padding: 0;
-}
-
-.navbar li {
-  margin: 0;
-}
-
-.navbar a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-.navbar a:hover {
-  color: #ffd700;
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
-  line-height: 1.6;
-}
-
-.navbar {
-  background-color: #1520b0;
-  padding: 15px 30px;
-}
-
-.navbar ul {
-  display: flex;
-  list-style: none;
-  gap: 30px;
-  margin: 0;
-  padding: 0;
-}
-
-.navbar li {
-  margin: 0;
-}
-
-.navbar a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-.navbar a:hover {
-  color: #ffd700;
-}
-
-#home {
-  text-align: center;
-  padding: 60px 20px;
-}
-
-#home h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-#features {
-  padding: 60px 20px;
-  background-color: #fff;
-  text-align: center;
-}
-
-#features h2 {
-  font-size: 2rem;
-  margin-bottom: 40px;
-  color: #1520b0;
-}
-
-.features-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.feature {
-  background-color: #f9f9f9;
-  border: 2px solid #e0e0e0;
-  border-radius: 8px;
-  padding: 25px;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.feature:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-  border-color: #1520b0;
-}
-
-.feature h3 {
-  font-size: 1.3rem;
-  color: #1520b0;
-  margin-bottom: 15px;
-}
-
-.feature p {
-  color: #666;
-  font-size: 0.95rem;
-}
-* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -380,6 +232,155 @@ header {
   transform: translateY(-1px);
 }
 
+/* ===============================
+   ABOUT PAGE STYLES
+================================ */
+
+/* HERO SECTION */
+.about-hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.about-hero h1 {
+  font-size: 2.6rem;
+  color: #1520b0;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.about-hero p {
+  max-width: 650px;
+  margin: 0 auto;
+  color: #555;
+  font-size: 1.05rem;
+}
+
+/* CONTENT SECTION */
+.about-content {
+  padding: 70px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about-content h2 {
+  color: #1520b0;
+  margin-bottom: 10px;
+  margin-top: 30px;
+  font-size: 1.6rem;
+}
+
+.about-content p {
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.about-content ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.about-content li {
+  margin-bottom: 8px;
+  color: #444;
+}
+
+/* ===============================
+   SKILLS SECTION
+================================ */
+
+.skills {
+  padding: 80px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.skills h2 {
+  font-size: 2.2rem;
+  color: #1520b0;
+  margin-bottom: 40px;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.skill-card {
+  background-color: #fff;
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(21, 32, 176, 0.15);
+}
+
+.skill-card h3 {
+  color: #1520b0;
+  margin-bottom: 10px;
+}
+
+.skill-card p {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+/* ===============================
+   CTA SECTION
+================================ */
+
+.cta {
+  padding: 80px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #1520b0 0%, #0d1380 100%);
+  color: #fff;
+}
+
+.cta h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.cta p {
+  margin-bottom: 20px;
+  color: #ddd;
+}
+
+/* BUTTON STYLE (REUSABLE) */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #ffd700;
+  color: #1520b0;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #ffed4e;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(255, 215, 0, 0.4);
+}
+
+/* ===============================
+   ACTIVE NAV LINK
+================================ */
+
+.navbar a.active {
+  background-color: rgba(255, 215, 0, 0.2);
+  color: #ffd700;
+}
+
 footer {
   background-color: #1520b0;
   color: #fff;
@@ -394,4 +395,172 @@ footer p {
   margin: 0;
   font-weight: 500;
   letter-spacing: 0.2px;
+}
+
+footer .footer-links {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+footer .footer-links a {
+  color: #ffd700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+footer .footer-links a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* ===============================
+   CONTACT PAGE STYLES
+================================ */
+
+.contact-page {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  min-height: calc(100vh - 200px);
+}
+
+.contact-content {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 50px;
+}
+
+.contact-content h1 {
+  font-size: 2.8rem;
+  color: #1520b0;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.contact-content p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.8;
+}
+
+/* CONTACT FORM */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  max-width: 500px;
+  margin: 50px auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 14px 18px;
+  font-size: 0.95rem;
+  border: none;
+  border-radius: 6px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: rgba(255, 255, 255, 0.97);
+  color: #333;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  resize: vertical;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #aaa;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  background-color: #fff;
+  box-shadow: 0 4px 15px rgba(21, 32, 176, 0.2);
+  transform: translateY(-2px);
+}
+
+.contact-form button {
+  padding: 14px 30px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #ffd700;
+  color: #1520b0;
+  font-weight: 600;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #ffed4e;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(255, 215, 0, 0.4);
+}
+
+.contact-form button:active {
+  transform: translateY(-1px);
+}
+
+/* CONTACT INFO */
+.contact-info {
+  max-width: 900px;
+  margin: 60px auto 0;
+  padding-top: 60px;
+  border-top: 2px solid #e0e0e0;
+  text-align: center;
+}
+
+.contact-info h2 {
+  font-size: 2rem;
+  color: #1520b0;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+
+.info-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.info-item {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.info-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(21, 32, 176, 0.15);
+}
+
+.info-item h3 {
+  font-size: 1.4rem;
+  color: #1520b0;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.info-item p {
+  color: #666;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.info-item a {
+  color: #1520b0;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.info-item a:hover {
+  color: #ffd700;
+  text-decoration: underline;
 }

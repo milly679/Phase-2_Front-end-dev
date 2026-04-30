@@ -3,53 +3,77 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portifolio</title>
+    <title>Portfolio</title>
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
+    <!-- ================= HEADER ================= -->
     <header>
       <nav class="navbar">
         <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <!-- Same page scroll -->
+          <li><a href="index.html#home">Home</a></li>
+
+          <!-- REAL PAGE LINK -->
+          <li><a href="about.html">About</a></li>
+
+          <!-- REAL PAGE LINK -->
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </header>
+
+    <!-- ================= MAIN ================= -->
     <main>
+      <!-- HOME -->
       <section id="home">
         <h1>Welcome to My Portfolio</h1>
         <p>This is a showcase of my work and projects.</p>
       </section>
+
+      <!-- FEATURES -->
       <section id="features">
         <h2>My Features</h2>
-      <div class="features-container">
-        <div class="feature">
-          <h3>Feature 1</h3>
-          <p>Description of feature 1.</p>
-        </div>
-        <div class="feature">
-          <h3>Feature 2</h3>
-          <p>Description of feature 2.</p>
-        </div>
-        <div class="feature">
-          <h3>Feature 3</h3>
-          <p>Description of feature 3.</p>
+
+        <div class="features-container">
+          <div class="feature">
+            <h3>Feature 1</h3>
+            <p>Description of feature 1.</p>
+          </div>
+
+          <div class="feature">
+            <h3>Feature 2</h3>
+            <p>Description of feature 2.</p>
+          </div>
+
+          <div class="feature">
+            <h3>Feature 3</h3>
+            <p>Description of feature 3.</p>
+          </div>
         </div>
       </section>
 
-    <section class="contact">
-      <form id="contact-form">
-        <!-- TODO: Add proper labels for accessibility -->
-        <input type="text" id="name" placeholder="Name" />
-        <input type="email" id="email" placeholder="Email" />
-        <button type="submit">Submit</button>
-      </form>
-    </section>
+      <!-- CONTACT -->
+      <section id="contact" class="contact">
+        <form id="contact-form">
+          <!-- Accessibility improvement -->
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="Name" />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Email" />
+
+          <button type="submit">Submit</button>
+        </form>
+      </section>
     </main>
+
+    <!-- ================= FOOTER ================= -->
     <footer>
       <p>&copy; 2026 My Portfolio. All rights reserved.</p>
     </footer>
+
     <script src="script.js"></script>
   </body>
 </html>

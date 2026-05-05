@@ -12,13 +12,13 @@
     <header>
       <nav class="navbar">
         <ul>
-          <!-- Same page scroll -->
-          <li><a href="index.html#home">Home</a></li>
+          <!-- SAME PAGE SCROLL -->
+          <li><a href="#home">Home</a></li>
 
-          <!-- REAL PAGE LINK -->
+          <!-- EXTERNAL PAGE -->
           <li><a href="about.html">About</a></li>
 
-          <!-- REAL PAGE LINK -->
+          <!-- SAME PAGE SCROLL -->
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
@@ -56,13 +56,15 @@
 
       <!-- CONTACT -->
       <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+
         <form id="contact-form">
-          <!-- Accessibility improvement -->
+          <!-- REQUIRED FOR JS VALIDATION -->
           <label for="name">Name</label>
-          <input type="text" id="name" placeholder="Name" />
+          <input type="text" id="name" placeholder="Enter your name" />
 
           <label for="email">Email</label>
-          <input type="email" id="email" placeholder="Email" />
+          <input type="email" id="email" placeholder="Enter your email" />
 
           <button type="submit">Submit</button>
         </form>

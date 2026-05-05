@@ -28,27 +28,21 @@ function attachNavigation(links) {
     link.addEventListener("click", (e) => {
       const href = link.getAttribute("href");
 
-      // ============================================
-      // CASE 1: SAME PAGE SCROLL (e.g. #contact)
-      // ============================================
+      // CASE 1: SAME PAGE SCROLL (#section)
       if (href.startsWith("#")) {
         e.preventDefault();
 
         const target = document.getElementById(href.substring(1));
-
         if (target) {
           target.scrollIntoView({ behavior: "smooth" });
         }
         return;
       }
 
-      // ============================================
-      // CASE 2: SAME PAGE WITH FILE (index.html#home)
-      // ============================================
+      // CASE 2: index.html#section
       if (href.includes("#") && href.includes("index.html")) {
         const [file, hash] = href.split("#");
 
-        // If already on index.html → smooth scroll
         if (
           window.location.pathname.includes("index.html") ||
           window.location.pathname === "/"
@@ -60,15 +54,10 @@ function attachNavigation(links) {
             target.scrollIntoView({ behavior: "smooth" });
           }
         }
-
-        // Otherwise allow normal navigation
         return;
       }
 
-      // ============================================
-      // CASE 3: EXTERNAL PAGE (about.html, contact.html)
-      // ============================================
-      // Do NOT prevent default → allow navigation
+      // CASE 3: normal navigation → do nothing
     });
   });
 }
@@ -98,18 +87,86 @@ function attachFormHandler(form) {
 }
 
 // ============================================
-// DATA EXTRACTION
+// DATA EXTRACTION (FIXED)
 // ============================================
 
 function getFormData() {
+  const form = document.getElementById("contact-form");
+
   return {
-    name: document.getElementById("name")?.value.trim() || "",
-    email: document.getElementById("email")?.value.trim() || "",
+    name: form.elements["name"].value.trim(),
+    email: form.elements["email"].value.trim(),
+    subject: form.elements["subject"].value.trim(),
+    message: form.elements["message"].value.trim(),
   };
 }
 
 // ============================================
-// EXPORT FOR TESTING
+// VALIDATION (IMPROVED)
 // ============================================
 
-module.exports = { validateForm };
+function validateForm({ name, email, subject, message }) {
+  if (!name || !email || !subject || !message) {
+    return {
+      isValid: false,
+      message: "All fields are required.",
+    };
+  }
+
+  if (!isValidEmail(email)) {
+    return {
+      isValid: false,
+      message: "Invalid email format.",
+    };
+  }
+
+  return {
+    isValid: true,
+    message: "Validation passed.",
+  };
+}
+
+function isValidEmail(email) {
+  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return regex.test(email);
+}
+
+// ============================================
+// SIMULATED SUBMISSION
+// ============================================
+
+function simulateSubmit(data) {
+  showMessage("Submitting...", "info");
+
+  setTimeout(() => {
+    console.log("✅ Submitted:", data);
+
+    showMessage("Form submitted successfully!", "success");
+    resetForm();
+  }, 1000);
+}
+
+// ============================================
+// UI FEEDBACK
+// ============================================
+
+function showMessage(message, type) {
+  const existing = document.querySelector(".form-message");
+  if (existing) existing.remove();
+
+  const msg = document.createElement("div");
+  msg.className = `form-message ${type}`;
+  msg.textContent = message;
+
+  const form = document.getElementById("contact-form");
+  if (form) form.appendChild(msg);
+}
+
+// ============================================
+// RESET FORM
+// ============================================
+
+function resetForm() {
+  const form = document.getElementById("contact-form");
+  if (form) form.reset();
+}
